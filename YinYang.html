@@ -10,6 +10,14 @@
 
 <body>
   <style>
+    @keyframes spin{
+      from{
+        transform: rotate(0deg);
+      }
+      to{
+        transform: rotate(360deg);
+      }
+    }
     #yin-yang{
       width: 96px;
       height: 48px;
@@ -18,6 +26,10 @@
       border-radius: 100%;
       background: #fff;
       position: relative;
+      animation-duration: 3s;
+      animation-name: spin;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
     #yin-yang::before{
       content: "";
